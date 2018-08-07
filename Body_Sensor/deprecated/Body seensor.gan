@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Body Sensor Network" company="" webLink="http://" view-date="2017-11-26" view-index="0" gantt-divider-location="556" resource-divider-location="236" version="2.8.5" locale="en">
+    <description/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Name" width="396" order="0"/>
+        <field id="tpd4" name="Begin date" width="85" order="1"/>
+        <field id="tpd5" name="End date" width="69" order="2"/>
+        <option id="color.recent"><![CDATA[#ff0000 #33ff66 #000000 #eeeeee]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="162" order="0"/>
+        <field id="1" name="Default role" width="68" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="126" name="Getting familiar with Java programming" color="#8cb6ce" meeting="false" start="2017-11-24" duration="10" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+            <depend id="38" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" name="Basic understanding of the project" color="#8cb6ce" meeting="false" start="2017-11-24" duration="5" complete="0" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+            <depend id="45" type="2" difference="0" hardness="Strong"/>
+            <depend id="79" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="4" name="Do research on algorithms" color="#33ff66" meeting="false" start="2017-12-01" duration="7" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <depend id="38" type="2" difference="0" hardness="Strong"/>
+            <task id="45" name="Algorithms based on machine learning" color="#33ff66" meeting="false" start="2017-12-01" duration="4" complete="0" expand="true">
+                <depend id="53" type="2" difference="0" hardness="Rubber"/>
+                <depend id="145" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="53" name="Algorithms based on linear algebra" color="#33ff66" meeting="false" start="2017-12-07" duration="3" complete="0" expand="true"/>
+            <task id="145" name="Other kinds of algorithms" color="#33ff66" meeting="false" start="2017-12-07" duration="3" complete="0" expand="true">
+                <depend id="7" type="2" difference="0" hardness="Rubber"/>
+            </task>
+        </task>
+        <task id="7" name="Implementing the algorithm" color="#33ff66" meeting="false" start="2017-12-12" duration="22" complete="0" expand="true">
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
+            <task id="38" name="Neural Network: collection and labeling of raw data" color="#8cb6ce" meeting="false" start="2017-12-12" duration="7" complete="0" expand="true">
+                <depend id="177" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="177" name="Neural Network: implementation" color="#33ff66" meeting="false" start="2017-12-21" duration="10" complete="0" expand="true">
+                <depend id="164" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="164" name="Neural Network: does it work? Test and if not, try out other algorithms" color="#33ff66" meeting="false" start="2018-01-04" duration="5" complete="0" expand="true"/>
+        </task>
+        <task id="2" name="Defining system structure" color="#ff0000" meeting="false" start="2017-12-01" duration="10" complete="0" expand="true">
+            <notes><![CDATA[e.g. structure of the program, dependencies, external libraries, classes, UML diagram etc.]]></notes>
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+            <task id="79" name="Understanding the existing java code (Bluetooth interface, message parser etc.)" color="#ff0000" meeting="false" start="2017-12-01" duration="3" complete="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="70" name="Finding GUI solution" color="#ff0000" meeting="false" start="2017-12-06" duration="4" complete="0" expand="true">
+                <depend id="190" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="190" name="Creating UML diagram" color="#ff0000" meeting="false" start="2017-12-12" duration="3" complete="0" expand="true">
+                <depend id="8" type="2" difference="0" hardness="Rubber"/>
+                <depend id="198" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="8" name="Implementing the Android App" color="#ff0000" meeting="false" start="2017-12-15" duration="13" complete="0" expand="true">
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
+            <depend id="11" type="2" difference="0" hardness="Strong"/>
+            <task id="198" name="GUI" color="#ff0000" meeting="false" start="2017-12-15" duration="5" complete="0" expand="true">
+                <depend id="209" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="209" name="Backend and helping the other guy working on the algorithm" color="#ff0000" meeting="false" start="2017-12-22" duration="5" complete="0" expand="true">
+                <depend id="201" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="201" name="Utilities" color="#ff0000" meeting="false" start="2017-12-29" duration="3" complete="0" expand="true"/>
+        </task>
+        <task id="11" name="Merging and pre-testing of the modules" color="#8cb6ce" meeting="false" start="2018-01-03" duration="10" complete="0" expand="true">
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="9" name="Testing/Debugging" color="#8cb6ce" meeting="false" start="2018-01-17" duration="16" complete="0" expand="true"/>
+        <task id="12" name="Preparing the presentation" color="#8cb6ce" meeting="false" start="2018-01-17" duration="16" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Daoping Wang" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Beike Lu" function="Default:1" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="1" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="2" resource-id="0" function="Default:1" responsible="true" load="0.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="11" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="12" resource-id="0" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="79" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="70" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="126" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="38" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="8" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="190" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="198" resource-id="0" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="201" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="209" resource-id="0" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="4" resource-id="1" function="Default:1" responsible="true" load="0.0"/>
+        <allocation task-id="9" resource-id="1" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="12" resource-id="1" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="45" resource-id="1" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="53" resource-id="1" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="7" resource-id="1" function="Default:1" responsible="true" load="0.0"/>
+        <allocation task-id="126" resource-id="1" function="Default:1" responsible="false" load="40.0"/>
+        <allocation task-id="1" resource-id="1" function="Default:1" responsible="true" load="50.0"/>
+        <allocation task-id="145" resource-id="1" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="38" resource-id="1" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="164" resource-id="1" function="Default:1" responsible="true" load="30.0"/>
+        <allocation task-id="177" resource-id="1" function="Default:1" responsible="true" load="40.0"/>
+        <allocation task-id="11" resource-id="1" function="Default:1" responsible="true" load="30.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

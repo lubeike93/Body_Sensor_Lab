@@ -1,0 +1,13 @@
+.DS_Store
+
+*.m~
+
+python_module/classification/\.idea/
+
+matlab_module/data/corrupted/
+
+matlab_module/codegen/mex/
+
+matlab_module/get_feature_array\.prj
+
+*.mexmaci64

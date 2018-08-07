@@ -1,0 +1,588 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gundumGrey"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/spinnerLayout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/gundumBlue">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="48dip" />
+
+            <ToggleButton
+                android:id="@+id/btnVibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0"
+                android:text="Vibrate"
+                android:textOff="Vibrate"
+                android:textOn="Vibrate"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnCmd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@color/gundumRed"
+                android:text="Cmd"
+                android:visibility="gone" />
+
+            <ToggleButton
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0"
+                android:background="@color/gundumRed"
+
+                android:fontFamily="@font/neogen"
+                android:text="Send"
+                android:textOff="Send"
+                android:textOn="Send"
+                android:typeface="normal"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/statusTextView"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:background="@color/gundumBlue"
+            android:fontFamily="@font/neogen"
+            android:gravity="center"
+            android:text="StandBy"
+            android:textColor="@color/gundumGrey"
+            android:textSize="36sp"
+            android:typeface="normal"
+            app:fontFamily="@font/neo_gen" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="280dp"
+            android:layout_weight="0"
+            android:background="@drawable/rx78"
+            android:visibility="visible">
+
+            <com.androidplot.xy.XYPlot
+                android:id="@+id/accPlot"
+                title=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/stepsCalLayout"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/gundumBlue"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/stepsCalTextLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/steps"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/neogen"
+                    android:gravity="center"
+                    android:text="Steps"
+                    android:textColor="@color/gundumGrey"
+                    android:textSize="24sp"
+                    android:typeface="normal" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gundumGrey" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/cal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/neogen"
+                    android:gravity="center"
+                    android:text="kCal"
+                    android:textColor="@color/gundumGrey"
+                    android:textSize="24sp"
+                    android:typeface="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stepsCalTextValue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/stepsV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/neogen"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/gundumGrey"
+                    android:textSize="18sp"
+                    android:typeface="normal" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gundumGrey" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/calV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/neogen"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/gundumGrey"
+                    android:textSize="18sp"
+                    android:typeface="normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/gap9"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/statesLayout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/gundumYellow"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/pastStatesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tminus2Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="null"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="16sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tminus1Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="null"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="16sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="null"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="16sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tplus1Value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="null"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="16sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/featureValuesLayout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/gundumYellow"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/maxSVMTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="maxSVM"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/maxXTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="maxX"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/minXTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="minX"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/stdSVMTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="stdSVM"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/stdXTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="stdX"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/meanPeakTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="meanPeak"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@color/gundumGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/gundumYellow"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/maxSVMValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/maxXValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/minXValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/stdSVMValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/stdXValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/meanPeakValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/gundumDG"
+                    android:textSize="18sp"
+                    android:typeface="normal"
+                    app:fontFamily="@font/neogen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <GridLayout
+            android:id="@+id/gap10"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0"
+            android:visibility="visible">
+
+        </GridLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/switchStepButton"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_weight="0"
+            android:background="@color/gundumRed"
+            android:fontFamily="@font/neogen"
+            android:gravity="center"
+            android:text="Switch to ranged mode"
+            android:textColor="@color/gundumGrey"
+            android:textSize="20sp" />
+
+        <GridLayout
+            android:id="@+id/gap7"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/resetStepButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/gundumRed"
+                android:fontFamily="@font/neogen"
+                android:gravity="center"
+                android:text="Reset"
+                android:textColor="@color/gundumGrey"
+                android:textSize="20sp"
+                android:typeface="normal" />
+
+            <GridLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0">
+
+            </GridLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/startStopStepButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/gundumRed"
+                android:fontFamily="@font/neogen"
+                android:gravity="center"
+                android:text="Start/Stop"
+                android:textColor="@color/gundumGrey"
+                android:textSize="20sp"
+                android:typeface="normal" />
+
+            <GridLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0">
+
+            </GridLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/debugButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/gundumRed"
+                android:fontFamily="@font/neogen"
+                android:gravity="center"
+                android:text="Debug"
+                android:textColor="@color/gundumGrey"
+                android:textSize="20sp"
+                android:typeface="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/modelButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/switchModelButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="hello world"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/gap5"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_weight="0">
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>
